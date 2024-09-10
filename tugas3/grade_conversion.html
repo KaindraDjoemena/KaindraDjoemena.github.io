@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Konversi Nilai</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h2 {
+            color: #333;
+        }
+        .input-container {
+            margin-bottom: 20px;
+        }
+        input[type="number"], input[type="text"] {
+            padding: 10px;
+            width: 200px;
+            font-size: 16px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[readonly] {
+            background-color: #e9e9e9;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h2>Konversi Nilai Angka ke Huruf</h2>
+    <div class="input-container">
+        <p>Masukkan nilai: <input type="number" id="nilai" /></p>
+        <p>Nilai Huruf: <input type="text" id="huruf" readonly /></p>
+    </div>
+    <button onclick="konversiNilai()">Konversi</button>
+
+    <script>
+        function konversiNilai() {
+            var nilai = parseInt(document.getElementById("nilai").value);
+            var huruf = '';
+
+            if (nilai >= 0 && nilai <= 40) {
+                huruf = 'E';
+            } else if (nilai >= 41 && nilai <= 55) {
+                huruf = 'D';
+            } else if (nilai >= 56 && nilai <= 60) {
+                huruf = 'C';
+            } else if (nilai >= 61 && nilai <= 65) {
+                huruf = 'BC';
+            } else if (nilai >= 66 && nilai <= 70) {
+                huruf = 'B';
+            } else if (nilai >= 71 && nilai <= 80) {
+                huruf = 'AB';
+            } else if (nilai >= 81 && nilai <= 100) {
+                huruf = 'A';
+            } else {
+                huruf = 'Nilai tidak valid';
+            }
+
+            document.getElementById("huruf").value = huruf;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator Sederhana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h2 {
+            color: #333;
+        }
+        .input-container {
+            margin-bottom: 15px;
+        }
+        input[type="number"], input[type="text"] {
+            padding: 8px;
+            width: 150px;
+            font-size: 16px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[readonly] {
+            background-color: #e9e9e9;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Kalkulator Sederhana</h2>
+    <div class="input-container">
+        <p>Bil 1: <input type="number" id="bil1" /></p>
+        <p>Bil 2: <input type="number" id="bil2" /></p>
+        <p>Hasil: <input type="text" id="hasil" readonly /></p>
+    </div>
+
+    <button onclick="hitung('+')">+</button>
+    <button onclick="hitung('-')">-</button>
+    <button onclick="hitung('*')">x</button>
+    <button onclick="hitung('/')">/</button>
+
+    <script>
+        function hitung(operasi) {
+            var bil1 = parseFloat(document.getElementById("bil1").value);
+            var bil2 = parseFloat(document.getElementById("bil2").value);
+            var hasil = 0;
+
+            if (operasi === '+') {
+                hasil = bil1 + bil2;
+            } else if (operasi === '-') {
+                hasil = bil1 - bil2;
+            } else if (operasi === '*') {
+                hasil = bil1 * bil2;
+            } else if (operasi === '/') {
+                hasil = bil1 / bil2;
+            }
+
+            document.getElementById("hasil").value = hasil;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+.header {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Biodata section */
+.biodata {
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.biodata h2 {
+    color: #2c3e50;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.biodata p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Task list styling */
+.tasks {
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tasks h2 {
+    color: #2c3e50;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.tasks ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.tasks li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+strong {
+    color: #34495e;
+}
